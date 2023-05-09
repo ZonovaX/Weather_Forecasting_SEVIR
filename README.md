@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # sevir_challenges
 A collection of challenges and baseline models for the SEVIR weather dataset.
 
@@ -62,3 +63,6 @@ bucket.download_file('data/vil/2017/SEVIR_VIL_STORMEVENTS_2017_0701_1231.h5','/h
 
 
 
+=======
+# Weather_Forecasting_SEVIR
+>>>>>>> 86dbfc2d9609fd70858b56fd3036ee593b90717e
