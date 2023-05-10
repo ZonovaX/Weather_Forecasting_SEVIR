@@ -66,9 +66,9 @@ else:
     print('Test file %s already exists' % DEST_TEST_FILE)
 
 # Control how many samples are read.   Set to -1 to read all 5000 samples.
-N_TRAIN= 100
+N_TRAIN= -1
 TRAIN_VAL_FRAC=0.8
-N_TEST= 40
+N_TEST= -1
 
 # Loading data takes a few minutes
 with h5py.File(DEST_TRAIN_FILE,'r') as hf:
@@ -180,3 +180,5 @@ for epoch in range(num_epochs):
     writer.add_scalar("Validation Loss", 0.021*mean_val_loss, epoch)
 writer.close()
 
+# save model for later use
+torch.save(unet.state_dict(), 'unet_10epochs.h5')
